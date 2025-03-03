@@ -1,0 +1,20 @@
+{{/*  cool-button  */}}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('Yeelight の 小屋 加载完成');
+    // 增强按钮交互效果（例如你的 cool-button）
+    const buttons = document.querySelectorAll('.cool-button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        console.log('按钮被点击:', button.textContent);
+      });
+      // 添加悬停动画（可选）
+      button.addEventListener('mouseover', () => {
+        button.style.transform = 'scale(1.05)';
+      });
+      button.addEventListener('mouseout', () => {
+        button.style.transform = 'scale(1)';
+      });
+    });
+  });
+</script>
