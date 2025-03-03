@@ -1,0 +1,16 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 暗色背景 -->
+  <circle cx="32" cy="32" r="30" fill="#222" stroke="#e0e0e0" stroke-width="2"/>
+
+  <!-- 简化的小屋 -->
+  <path d="M16,36 L32,22 L48,36" fill="none" stroke="#e0e0e0" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="20" y="36" width="24" height="16" fill="#333" stroke="#e0e0e0" stroke-width="2.5" rx="1"/>
+
+  <!-- 门 -->
+  <rect x="28" y="42" width="8" height="10" fill="#222" stroke="#e0e0e0" stroke-width="1.5"/>
+
+  <!-- 光线效果（代表"Yeelight"） -->
+  <path d="M32,18 L32,12" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M26,20 L22,15" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M38,20 L42,15" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1845)"><rect width="1000" height="1000" fill="#333333"></rect><g transform="matrix(15.625,0,0,15.625,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="64" height="64"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <circle cx="32" cy="32" r="30" fill="#f5f5f5" stroke="#333" stroke-width="2"></circle>
+
+  <!-- 简化的小屋 -->
+  <path d="M16,36 L32,22 L48,36" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round"></path>
+  <rect x="20" y="36" width="24" height="16" fill="#fff" stroke="#333" stroke-width="2.5" rx="1"></rect>
+
+  <!-- 门 -->
+  <rect x="28" y="42" width="8" height="10" fill="#f5f5f5" stroke="#333" stroke-width="1.5"></rect>
+
+  <!-- 光线效果（代表"Yeelight"） -->
+  <path d="M32,18 L32,12" stroke="#333" stroke-width="2" stroke-linecap="round"></path>
+  <path d="M26,20 L22,15" stroke="#333" stroke-width="2" stroke-linecap="round"></path>
+  <path d="M38,20 L42,15" stroke="#333" stroke-width="2" stroke-linecap="round"></path>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1845"><rect width="1000" height="1000" x="0" y="0" rx="500" ry="500"></rect></clipPath></defs></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1846)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(15.625,0,0,15.625,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="64" height="64"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <circle cx="32" cy="32" r="30" fill="#f5f5f5" stroke="#333" stroke-width="2"></circle>
+
+  <!-- 简化的小屋 -->
+  <path d="M16,36 L32,22 L48,36" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round"></path>
+  <rect x="20" y="36" width="24" height="16" fill="#fff" stroke="#333" stroke-width="2.5" rx="1"></rect>
+
+  <!-- 门 -->
+  <rect x="28" y="42" width="8" height="10" fill="#f5f5f5" stroke="#333" stroke-width="1.5"></rect>
+
+  <!-- 光线效果（代表"Yeelight"） -->
+  <path d="M32,18 L32,12" stroke="#333" stroke-width="2" stroke-linecap="round"></path>
+  <path d="M26,20 L22,15" stroke="#333" stroke-width="2" stroke-linecap="round"></path>
+  <path d="M38,20 L42,15" stroke="#333" stroke-width="2" stroke-linecap="round"></path>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1846"><rect width="1000" height="1000" x="0" y="0" rx="250" ry="250"></rect></clipPath></defs></svg></g></svg>

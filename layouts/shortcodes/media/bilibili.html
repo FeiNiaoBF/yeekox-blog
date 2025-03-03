@@ -1,0 +1,31 @@
+{{/*  利用 Hugo 的shortcode做的嵌入式bilibili  */}}
+
+{{- $bvid := .Get "bvid" -}}
+{{- $width := .Get "width" | default "100%" -}}
+{{- $height := .Get "height" | default "500" -}}
+{{- $autoplay := .Get "autoplay" | default "false" -}}
+{{- $page := .Get "page" | default "1" -}}
+{{- $high_quality := .Get "high_quality" | default "0" -}}
+{{- $class := .Get "class" -}}
+
+{{- if not $bvid -}}
+  {{- errorf "bvid is required" -}}
+{{- end -}}
+
+<div
+    class="hextra-bilibili-container hx-relative hx-w-full \
+        hx-rounded-2xl hx-border hx-border-gray-200 hx-bg-white \
+        dark:hx-border-neutral-800 dark:hx-bg-neutral-900  \
+        hx-overflow-hidden hx-shadow-md hover:hx-shadow-lg hx-transition-all \
+        {{ $class }}">
+    <iframe
+        src="//player.bilibili.com/player.html?bvid={{ $bvid }}&autoplay={{ $autoplay }}&page={{ $page }}&high_quality={{ $high_quality }}"
+        scrolling="no"
+        border="0"
+        frameborder="no"
+        framespacing="0"
+        allowfullscreen="true"
+        class="hx-w-full"
+        style="aspect-ratio: 16/9; width: {{ $width }}; height: {{ $height }};"
+    ></iframe>
+</div>

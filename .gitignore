@@ -4,4 +4,5 @@ resources/
 .hugo_build.lock
 
 # Editor
-.vscode/
+# .vscode/
+.lh/
