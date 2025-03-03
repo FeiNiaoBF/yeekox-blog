@@ -3,7 +3,9 @@ documentation: 文档
 home: 首页
 posts: 文章
 blog: 博客
+novel: 小说
 about: 关于
+
 light: "浅色"
 dark: "深色"
 backToTop: "返回顶部"
@@ -16,5 +18,4 @@ onThisPage: "此页上"
 poweredBy: "由 Hextra 驱动"
 readMore: "更多 →"
 searchPlaceholder: "搜索文档..."
-
-more: "更多"
+more: 更多

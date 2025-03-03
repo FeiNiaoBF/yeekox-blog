@@ -1,7 +1,7 @@
 ---
 date: '2025-03-03T14:20:28+08:00'
 draft: false
-title: 'Posts'
+title: '流水落花，香满楼'
 toc: false
-layout: wide
+type: blog
 ---
