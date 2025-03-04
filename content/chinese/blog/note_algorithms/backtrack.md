@@ -6,6 +6,7 @@ author: ["Yeelight"]
 math: false
 toc: true
 excludeSearch: true
+comments: true
 ---
 
 > 有组合就要回溯

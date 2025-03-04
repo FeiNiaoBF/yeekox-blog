@@ -5,6 +5,7 @@ draft: false  # Is this a draft? true/false！！！
 author: ["Yeelight"]
 math: false
 toc: true
+comments: true
 ---
 
 ## 引言：迈向 Web 开发的第一步

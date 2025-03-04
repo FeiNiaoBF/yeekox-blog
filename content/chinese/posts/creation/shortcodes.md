@@ -1,11 +1,12 @@
 ---
-title: '[主题创作]做一个自己的短代码'
+title: '做一个自己的短代码'
 date: 2025-03-03T16:52:18+08:00
 draft: false # Is this a draft? true/false！！！
 author: ['Yeelight']
 math: false
 toc: true
 type: docs
+comments: true
 ---
 
 ## 起因

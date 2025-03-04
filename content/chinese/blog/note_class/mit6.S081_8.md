@@ -5,7 +5,7 @@ draft: false  # Is this a draft? true/false！！！
 author: ["Yeelight"]
 math: false
 toc: true
-excludeSearch: true
+comments: true
 ---
 
 > ls 去哪里了

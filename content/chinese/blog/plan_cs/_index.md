@@ -6,6 +6,8 @@ author: ["Yeelight"]
 math: true
 toc: true
 type: "docs"
+comments: true
+weight: 1
 ---
 
 ## 背景：为何制定个人成长计划？

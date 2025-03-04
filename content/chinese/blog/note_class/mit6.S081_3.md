@@ -5,7 +5,7 @@ draft: false  # Is this a draft? true/false！！！
 author: ["Yeelight"]
 math: false
 toc: true
-excludeSearch: true
+comments: true
 ---
 ## 通过 XV6 了解操作系统
 

@@ -58,7 +58,7 @@ params:
     list:
       displayTags: true
       # date | lastmod | publishDate | title | weight
-      sortBy: date
+      sortBy: weight
       sortOrder: desc # or "asc"
 
     article:
@@ -71,14 +71,20 @@ params:
       display: hover
   # 评论配置
   comments:
-    enable: false
+    enable: true
     type: giscus
 
     giscus:
       repo: FeiNiaoBF/yeekox-blo
       repoId: R_kgDOOCOsYw
-      category: Announcements
+      category: General
       categoryId: DIC_kwDOOCOsY84Cni-m
+      mapping: pathname
+      strict: 0
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: bottom
+      lang: zh-CN
 # import hextra as module
 module:
   imports:

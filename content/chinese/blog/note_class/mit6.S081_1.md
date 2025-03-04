@@ -5,7 +5,7 @@ draft: false  # Is this a draft? true/false！！！
 author: ["Yeelight"]
 math: false
 toc: true
-excludeSearch: true
+comments: true
 ---
 
 该笔记以OSTEP 为主体
