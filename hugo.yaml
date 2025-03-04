@@ -69,7 +69,16 @@ params:
       enable: true
       # hover | always
       display: hover
+  # 评论配置
+  comments:
+    enable: false
+    type: giscus
 
+    giscus:
+      repo: FeiNiaoBF/yeekox-blo
+      repoId: R_kgDOOCOsYw
+      category: Announcements
+      categoryId: DIC_kwDOOCOsY84Cni-m
 # import hextra as module
 module:
   imports:
