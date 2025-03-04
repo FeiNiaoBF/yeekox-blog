@@ -28,7 +28,7 @@ layout: hextra-home
 </div>
 
 <div class="hx-mb-6">
-{{< hextra/hero-button text="个人博客" link="blog" >}}
+<!-- {{< hextra/hero-button text="个人博客" link="blog" >}} -->
 {{< hextra/hero-button text="博客更新计划" link="update" >}}
 </div>
 

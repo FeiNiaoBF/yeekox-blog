@@ -4,7 +4,9 @@ param (
     [Parameter(Mandatory=$true)]
     [string]$global,
     [Parameter(Mandatory=$false)]
-    [string]$category = ""
+    [string]$category = "",
+    [Parameter(Mandatory=$false)]
+    [string]$file = ""
 )
 
 $languages = @("english", "chinese", "japan")
@@ -30,8 +32,10 @@ if (-not (Test-Path "hugo.yaml") -and -not (Test-Path "hugo.toml") -and -not (Te
 foreach ($lang in $languages) {
     if ([string]::IsNullOrEmpty($category)) {
         $filePath = "content\$lang\$global\_index.md"
-    } else {
+    } elseif ([string]::IsNullOrEmpty($file)) {
         $filePath = "content\$lang\$global\$category\_index.md"
+    } else {
+        $filePath = "content\$lang\$global\$category\$file.md"
     }
     Write-Host "Creating $filePath..."
     try {

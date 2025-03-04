@@ -27,7 +27,8 @@ layout: hextra-home
 </div>
 
 <div class="hx-mb-6">
-{{< hextra/hero-button text="Blog ->" link="blog" >}}
+<!-- {{< hextra/hero-button text="Blog ->" link="blog" >}} -->
+{{< hextra/hero-button text="Update Diary" link="update" >}}
 </div>
 
 <div class="hx-mt-6"></div>
