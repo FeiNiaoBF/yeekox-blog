@@ -5,7 +5,7 @@ draft: false # Is this a draft? true/false！！！
 author: ['Yeelight']
 math: false
 toc: true
-excludeSearch: true
+type: docs
 ---
 
 ## 起因
