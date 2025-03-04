@@ -1,7 +1,7 @@
 ---
 title: "⭐个人成长计划"
 date: 2025-03-04T09:58:41+08:00
-draft: true  # Is this a draft? true/false！！！
+draft: false  # Is this a draft? true/false！！！
 author: ["Yeelight"]
 math: true
 toc: true

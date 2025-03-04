@@ -1,7 +1,7 @@
 ---
 title: "GDB基本使用"
 date: 2023-04-24T19:10:36+08:00
-draft: true  # Is this a draft? true/false！！！
+draft: false  # Is this a draft? true/false！！！
 author: ["Yeelight"]
 math: false
 toc: true

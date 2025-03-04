@@ -1,7 +1,7 @@
 ---
 title: "MIT6.824 Distributed System(1)"
 date: 2024-07-01T17:16:12+08:00
-draft: true  # Is this a draft? true/false！！！
+draft: false  # Is this a draft? true/false！！！
 author: ["Yeelight"]
 math: false
 toc: true

@@ -1,7 +1,7 @@
 ---
 title: "JavaScript 和 TypeScript 学习之旅"
 date: 2024-03-10T15:58:41+08:00
-draft: true  # Is this a draft? true/false！！！
+draft: false  # Is this a draft? true/false！！！
 author: ["Yeelight"]
 math: false
 toc: true
