@@ -1,6 +1,6 @@
 ---
 date: '2025-03-01T13:33:00+08:00'
-draft: true
+draft: false
 title: 'Yeelight の 小屋'
 toc: false
 layout: hextra-home
