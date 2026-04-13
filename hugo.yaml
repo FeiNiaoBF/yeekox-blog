@@ -51,7 +51,7 @@ params:
     logo:
       path: images/logo.svg
       dark: images/logo-dark.svg
-      link: /
+      link: /yeekox-blog
       width: 100
     width: wide
 
