@@ -1,79 +1,105 @@
-# Hugo configuration file
-baseURL: 'https://feiniaobf.github.io/yeekox-blog/'
+# 基础配置
+baseURL: 'https://feiniaobf.github.io/'
 title: Yeelight の 小屋
 
 enableRobotsTXT: true
-# Parse Git commit
 enableGitInfo: true
-# enableEmoji: false
 hasCJKLanguage: true
 enableInlineShortcodes: true
-#  网站配置
+
+outputs:
+  home: [html, llms]
+  page: [html, markdown]
+  section: [html, rss, markdown]
+
+# 模块导入与版本要求
+module:
+  hugoVersion:
+    extended: true
+    min: "0.146.0"
+  imports:
+    - path: github.com/imfing/hextra
+
+# 开启数学公式 (LaTeX) 解析支持
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
+
+# -----------------------------------------------------------
+# 全局参数配置 (Params)
+# -----------------------------------------------------------
 params:
-  description: '记录个人成长、技术探索与生活感悟，分享发现美好生活的点滴。'
-  keywords: ['成长', '技术', '博客', '生活', '探索', 'Blog']
+  # 外部链接自动添加跳转图标
+  externalLinkDecoration: true
+
+  # 开启图片点击放大 (Image Zoom)
+  imageZoom:
+    enable: true
+
   navbar:
     displayTitle: false
     displayLogo: true
     logo:
       path: images/logo.svg
       dark: images/logo-dark.svg
-      link: /yeekox-blog
+      link: /
       width: 100
     width: wide
+
   footer:
     enable: true
     displayCopyright: true
     displayPoweredBy: true
     width: normal
 
-  # Display the last modification date
   displayUpdatedDate: true
-  dateFormat: 'January 2, 2006'
+  dateFormat: "2006-01-02"
 
-  page:
-    # full (100%), wide (90rem), normal (1280px)
-    width: normal
-  # 页面模式
   theme:
-    # light | dark | system
     default: system
     displayToggle: true
-  # 搜索
+
   search:
     enable: true
     type: flexsearch
-
     flexsearch:
-      # 按以下内容索引页面：content | summary | heading | title
       index: content
-      # full | forward | reverse | strict
       tokenize: forward
-  # 编辑配置
+
   editURL:
     enable: true
-    base: 'https://github.com/FeiNiaoBF/yeekox-blog/edit/main/content/'
+    base: "https://github.com/FeiNiaoBF/yeekox-blog/edit/main/content/"
 
   blog:
     list:
       displayTags: true
-      # date | lastmod | publishDate | title | weight
       sortBy: date
-      sortOrder: desc # or "asc"
-
+      sortOrder: desc
+      pagerSize: 20 # 分页大小
     article:
       displayPagination: true
 
   highlight:
     copy:
       enable: true
-      # hover | always
       display: hover
-  # 评论配置
+
+  page:
+    width: normal
+
+  # Giscus 评论配置
   comments:
     enable: true
     type: giscus
-
     giscus:
       repo: FeiNiaoBF/yeekox-blog
       repoId: R_kgDOOCOsYw
@@ -85,93 +111,134 @@ params:
       emitMetadata: 0
       inputPosition: bottom
       lang: zh-CN
-# import hextra as module
-module:
-  imports:
-    - path: github.com/imfing/hextra
-markup:
-  # allow raw html
-  goldmark:
-    renderer:
-      unsafe: true
 
-  # enable hextra syntax highlight
-  highlight:
-    noClasses: false
-
-# menu 配置
-menu:
-  main:
-    - identifier: posts
-      name: Posts
-      pageRef: /posts
-      weight: 1
-    - identifier: blog
-      name: Blog
-      pageRef: /blog
-      weight: 2
-    - identifier: novel
-      name: Novel
-      pageRef: /novel
-      weight: 3
-    - identifier: about
-      name: About
-      pageRef: /about
-      weight: 4
-    - name: Search
-      weight: 5
-      params:
-        type: search
-    - name: GitHub
-      weight: 6
-      url: 'https://github.com/FeiNiaoBF/yeekox-blog'
-      params:
-        icon: github
-    - name: Twitter
-      weight: 7
-      url: 'https://twitter.com/'
-      params:
-        icon: x-twitter
-  sidebar:
-    - identifier: more
-      name: More
-      params:
-        type: separator
-      weight: 1
-    - name: '关于'
-      pageRef: '/about'
-      weight: 2
-
-outputs:
-  home: [HTML]
-  page: [HTML]
-  section: [HTML, RSS]
-
-# hugo 语言配置
+# ------------------------------------------------------
+# 多语言配置 (结合官方 Context Menu 特性)
+# ------------------------------------------------------
 defaultContentLanguage: zh-cn
-defaultContentLanguageInSubdir: true
+
 languages:
+  zh-cn:
+    languageName: 简体中文
+    languageCode: zh-CN
+    languageDirection: ltr
+    weight: 1
+    title: Yeelight の 小屋
+    params:
+      description: '记录个人成长、技术探索与生活感悟，分享发现美好生活的点滴。'
+      page:
+        contextMenu:
+          enable: true
+          links:
+            - name: 在 ChatGPT 中打开
+              icon: chatgpt
+              url: "https://chatgpt.com/?hints=search&q=%E6%88%91%E6%AD%A3%E5%9C%A8%E9%98%85%E8%AF%BB%E8%BF%99%E4%B8%AA%E6%96%87%E6%A1%A3%3A+{url}%0A%E5%B8%AE%E6%88%91%E7%90%86%E8%A7%A3%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%83%E3%80%82"
+    menu:
+      main:
+        - identifier: blog
+          name: 博客
+          pageRef: /blog
+          weight: 1
+        - identifier: novel
+          name: 小说
+          pageRef: /novel
+          weight: 2
+        - identifier: about
+          name: 关于
+          pageRef: /about
+          weight: 3
+        - name: 搜索
+          weight: 4
+          params:
+            type: search
+        - name: GitHub
+          weight: 5
+          url: "https://github.com/FeiNiaoBF/yeekox-blog"
+          params:
+            icon: github
+      sidebar:
+        - identifier: more
+          name: 更多
+          params:
+            type: separator
+          weight: 1
+        - name: 关于
+          pageRef: /about
+          weight: 2
   en:
     languageName: English
     languageCode: en
     languageDirection: ltr
-    disabled: false
-    contentDir: content/english
-    weight: 1
-    # title: Yeelight の 小屋
-  zh-cn:
-    languageName: 简体中文
-    languageCode: zh-cn
-    languageDirection: ltr
-    disabled: false
-    contentDir: content/chinese
     weight: 2
-    # title: Yeelight の 小屋
+    title: Yeelight's Cabin
+    params:
+      description: 'Documenting personal growth, technical exploration, and life moments.'
+      page:
+        contextMenu:
+          enable: true
+          links:
+            - name: Open in ChatGPT
+              icon: chatgpt
+              url: "https://chatgpt.com/?hints=search&q=I%27m+looking+at+this+documentation%3A+{url}%0AHelp+me+understand+how+to+use+it."
+    menu:
+      main:
+        - identifier: blog
+          name: Blog
+          pageRef: /blog
+          weight: 1
+        - identifier: novel
+          name: Novel
+          pageRef: /novel
+          weight: 2
+        - identifier: about
+          name: About
+          pageRef: /about
+          weight: 3
+        - name: Search
+          weight: 4
+          params:
+            type: search
+        - name: GitHub
+          weight: 5
+          url: "https://github.com/FeiNiaoBF/yeekox-blog"
+          params:
+            icon: github
   ja:
     languageName: 日本語
-    languageCode: ja
+    languageCode: ja-JP
     languageDirection: ltr
-    disabled: false
     contentDir: content/japan
     weight: 3
-    # title: Yeelight の 小屋
+    title: Yeelight の 小屋
+    params:
+      description: '個人の成長、技術の探求、生活の記録。'
+      page:
+        contextMenu:
+          enable: true
+          links:
+            - name: ChatGPTで開く
+              icon: chatgpt
+              url: "https://chatgpt.com/?hints=search&q=%E3%81%93%E3%81%AE%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%84%E3%81%BE%E3%81%99%3A+{url}%0A%E4%BD%BF%E3%81%84%E6%96%B9%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B%E3%81%AE%E3%82%92%E6%89%8B%E4%BC%9D%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82"
+    menu:
+      main:
+        - identifier: blog
+          name: ブログ
+          pageRef: /blog
+          weight: 1
+        - identifier: novel
+          name: 小説
+          pageRef: /novel
+          weight: 2
+        - identifier: about
+          name: について
+          pageRef: /about
+          weight: 3
+        - name: 検索
+          weight: 4
+          params:
+            type: search
+        - name: GitHub
+          weight: 5
+          url: "https://github.com/FeiNiaoBF/yeekox-blog"
+          params:
+            icon: github
