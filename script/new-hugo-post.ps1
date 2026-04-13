@@ -7,7 +7,7 @@ param (
     [string]$file = ""
 )
 
-$languages = @("english", "chinese", "japan")
+$languages = @("zh-cn", "en", "ja")
 $basePath = ".\"
 $hugoBasePath = Resolve-Path $basePath -ErrorAction Stop
 $errorCount = 0
@@ -29,18 +29,18 @@ if (-not (Test-Path "hugo.yaml") -and -not (Test-Path "hugo.toml") -and -not (Te
 
 # 动态构建文件路径并创建文件
 foreach ($lang in $languages) {
-    # 根据参数组合生成不同路径
+    # 根据新架构生成文件后缀名的路径，并用 ${} 保护变量名
     $filePath = if ([string]::IsNullOrEmpty($category)) {
         if ([string]::IsNullOrEmpty($file)) {
-            "content\$lang\$global\_index.md"   # 仅 global 参数
+            "content\${global}\_index.${lang}.md"   # 仅 global 参数 (例如: content\blog\_index.zh-cn.md)
         } else {
-            "content\$lang\$global\$file.md"     # global + file 参数
+            "content\${global}\${file}.${lang}.md"  # global + file 参数 (例如: content\blog\my-post.zh-cn.md)
         }
     } else {
         if ([string]::IsNullOrEmpty($file)) {
-            "content\$lang\$global\$category\_index.md"  # global + category 参数
+            "content\${global}\${category}\_index.${lang}.md"  # global + category 参数
         } else {
-            "content\$lang\$global\$category\$file.md"    # 所有参数组合
+            "content\${global}\${category}\${file}.${lang}.md" # 所有参数组合
         }
     }
 

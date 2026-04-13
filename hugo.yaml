@@ -1,5 +1,5 @@
 # 基础配置
-baseURL: 'https://feiniaobf.github.io/yeekox-blog'
+baseURL: "https://feiniaobf.github.io/yeekox-blog"
 title: Yeelight の 小屋
 
 enableRobotsTXT: true
@@ -30,7 +30,7 @@ markup:
     extensions:
       passthrough:
         delimiters:
-          block: [['\[', '\]'], ['$$', '$$']]
+          block: [['\[', '\]'], ["$$", "$$"]]
           inline: [['\(', '\)']]
         enable: true
 
@@ -113,7 +113,7 @@ params:
       lang: zh-CN
 
 # ------------------------------------------------------
-# 多语言配置 (结合官方 Context Menu 特性)
+# 多语言配置
 # ------------------------------------------------------
 defaultContentLanguage: zh-cn
 
@@ -125,7 +125,7 @@ languages:
     weight: 1
     title: Yeelight の 小屋
     params:
-      description: '记录个人成长、技术探索与生活感悟，分享发现美好生活的点滴。'
+      description: "记录个人成长、技术探索与生活感悟，分享发现美好生活的点滴。"
       page:
         contextMenu:
           enable: true
@@ -133,38 +133,6 @@ languages:
             - name: 在 ChatGPT 中打开
               icon: chatgpt
               url: "https://chatgpt.com/?hints=search&q=%E6%88%91%E6%AD%A3%E5%9C%A8%E9%98%85%E8%AF%BB%E8%BF%99%E4%B8%AA%E6%96%87%E6%A1%A3%3A+{url}%0A%E5%B8%AE%E6%88%91%E7%90%86%E8%A7%A3%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%83%E3%80%82"
-    menu:
-      main:
-        - identifier: blog
-          name: 博客
-          pageRef: /blog
-          weight: 1
-        - identifier: novel
-          name: 小说
-          pageRef: /novel
-          weight: 2
-        - identifier: about
-          name: 关于
-          pageRef: /about
-          weight: 3
-        - name: 搜索
-          weight: 4
-          params:
-            type: search
-        - name: GitHub
-          weight: 5
-          url: "https://github.com/FeiNiaoBF/yeekox-blog"
-          params:
-            icon: github
-      sidebar:
-        - identifier: more
-          name: 更多
-          params:
-            type: separator
-          weight: 1
-        - name: 关于
-          pageRef: /about
-          weight: 2
   en:
     languageName: English
     languageCode: en
@@ -172,7 +140,7 @@ languages:
     weight: 2
     title: Yeelight's Cabin
     params:
-      description: 'Documenting personal growth, technical exploration, and life moments.'
+      description: "Documenting personal growth, technical exploration, and life moments."
       page:
         contextMenu:
           enable: true
@@ -180,29 +148,6 @@ languages:
             - name: Open in ChatGPT
               icon: chatgpt
               url: "https://chatgpt.com/?hints=search&q=I%27m+looking+at+this+documentation%3A+{url}%0AHelp+me+understand+how+to+use+it."
-    menu:
-      main:
-        - identifier: blog
-          name: Blog
-          pageRef: /blog
-          weight: 1
-        - identifier: novel
-          name: Novel
-          pageRef: /novel
-          weight: 2
-        - identifier: about
-          name: About
-          pageRef: /about
-          weight: 3
-        - name: Search
-          weight: 4
-          params:
-            type: search
-        - name: GitHub
-          weight: 5
-          url: "https://github.com/FeiNiaoBF/yeekox-blog"
-          params:
-            icon: github
   ja:
     languageName: 日本語
     languageCode: ja-JP
@@ -211,7 +156,7 @@ languages:
     weight: 3
     title: Yeelight の 小屋
     params:
-      description: '個人の成長、技術の探求、生活の記録。'
+      description: "個人の成長、技術の探求、生活の記録。"
       page:
         contextMenu:
           enable: true
@@ -219,26 +164,86 @@ languages:
             - name: ChatGPTで開く
               icon: chatgpt
               url: "https://chatgpt.com/?hints=search&q=%E3%81%93%E3%81%AE%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%84%E3%81%BE%E3%81%99%3A+{url}%0A%E4%BD%BF%E3%81%84%E6%96%B9%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B%E3%81%AE%E3%82%92%E6%89%8B%E4%BC%9D%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82"
-    menu:
-      main:
-        - identifier: blog
-          name: ブログ
-          pageRef: /blog
-          weight: 1
-        - identifier: novel
-          name: 小説
-          pageRef: /novel
-          weight: 2
-        - identifier: about
-          name: について
-          pageRef: /about
-          weight: 3
-        - name: 検索
-          weight: 4
-          params:
-            type: search
-        - name: GitHub
-          weight: 5
-          url: "https://github.com/FeiNiaoBF/yeekox-blog"
-          params:
-            icon: github
+
+menu:
+  main:
+    - identifier: blog
+      pageRef: /blog
+      weight: 1
+
+    - identifier: gaming
+      pageRef: /gaming
+      weight: 2
+
+    - identifier: creations
+      weight: 3
+      params:
+        type: separator
+    - identifier: projects
+      parent: creations
+      pageRef: /projects
+      weight: 1
+    - identifier: novel
+      parent: creations
+      pageRef: /novel
+      weight: 2
+    - identifier: essay
+      parent: creations
+      pageRef: /essay
+      weight: 3
+
+    - identifier: more
+      pageRef: /more
+      weight: 4
+
+    - identifier: archives
+      pageRef: /archives
+      weight: 1
+      parent: more
+    - identifier: about
+      pageRef: /about
+      weight: 2
+      parent: more
+
+    - identifier: search
+      weight: 5
+      params:
+        type: search
+
+    - identifier: social
+      weight: 6
+      params:
+        type: separator
+    - identifier: github
+      weight: 1
+      url: "https://github.com/FeiNiaoBF/yeekox-blog"
+      parent: social
+      params:
+        type: link
+    - identifier: steam
+      weight: 2
+      url: "https://streamlabs.com/feiniaobf"
+      parent: social
+      params:
+        type: link
+    - identifier: x-twitter
+      weight: 3
+      url: "https://x.com/FeiNiaoBF"
+      parent: social
+      params:
+        type: links
+    - identifier: bilibili
+      weight: 4
+      url: "https://space.bilibili.com/592367582"
+      parent: social
+      params:
+        type: link
+  # 侧边栏菜单配置
+  sidebar:
+    - identifier: more
+      params:
+        type: separator
+      weight: 1
+    - identifier: about
+      pageRef: /about
+      weight: 2

@@ -1,22 +1,32 @@
-copyright: "© 2023-2025 Yeekox's Blog. あなたの生活と学習テクニックを記録します。"
-
+copyright: "© 2023-2025 Yeelight's Blog. 日常と技術学習の記録。"
 documentation: ドキュメント
 home: ホーム
-posts: 投稿
+posts: 記事
 blog: ブログ
 novel: 小説
 about: について
-light: 'ライト'
-dark: 'ダーク'
-backToTop: 'トップにスクロール'
-changeLanguage: '言語を変更'
-changeTheme: 'テーマを変更'
-editThisPage: 'このページをGitHubで編集 →'
-lastUpdated: '最終更新日'
-noResultsFound: '結果が見つかりませんでした。'
-onThisPage: 'このページの内容'
-poweredBy: '提供元 Hextra'
-readMore: 'もっと読む →'
-searchPlaceholder: '検索...'
+creations: 創作
+projects: プロジェクト
+essay: エッセイ
+archives: アーカイブ
+search: 検索
+social: ソーシャル
+github: GitHub
+bilibili: Bilibili
+gaming: ゲーム
+steam: Steam
+x-twitter: X
 
-more: 'もっと'
+light: "ライト"
+dark: "ダーク"
+backToTop: "トップへ戻る"
+changeLanguage: "言語を切り替える"
+changeTheme: "テーマを切り替える"
+editThisPage: "GitHub でこのページを編集 →"
+lastUpdated: "最終更新日: "
+noResultsFound: "結果が見つかりません"
+onThisPage: "このページの内容"
+poweredBy: "Powered by Hextra"
+readMore: "続きを読む →"
+searchPlaceholder: "検索..."
+more: もっと見る

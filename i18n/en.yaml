@@ -1,22 +1,33 @@
-copyright: "© 2023-2025 Yeekox's Blog. Record your life and learning techniques."
+copyright: "© 2023-2026 Yeelight's Blog. Documenting life and learning tech."
 documentation: Documentation
 home: Home
 posts: Posts
 blog: Blog
 novel: Novel
 about: About
+creations: Creations
+projects: Showcase
+essay: Essays
+archives: Archives
+search: Search
+social: Social Media
+github: GitHub
+bilibili: Bilibili
+gaming: Gaming
+steam: Steam
+x-twitter: X
+
+
 light: "Light"
 dark: "Dark"
 backToTop: "Scroll to top"
 changeLanguage: "Change language"
 changeTheme: "Change theme"
-copyCode: "Copy code"
 editThisPage: "Edit this page on GitHub →"
-lastUpdated: "Last updated on"
-noResultsFound: "No results found."
+lastUpdated: "Last updated on "
+noResultsFound: "No results found"
 onThisPage: "On this page"
 poweredBy: "Powered by Hextra"
 readMore: "Read more →"
 searchPlaceholder: "Search..."
-
-more: "More"
+more: More
