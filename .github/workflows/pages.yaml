@@ -1,5 +1,4 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Deploy Yeelight Blog to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -31,17 +30,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.132.2
+      HUGO_VERSION: 0.160.1
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # fetch all history for .GitInfo and .Lastmod
+          fetch-tags: true
           submodules: recursive
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22'
+          go-version: '1.26'
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -56,7 +56,8 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
-            --gc --minify \
+            --gc \
+            --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
