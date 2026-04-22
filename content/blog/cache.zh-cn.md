@@ -2,7 +2,10 @@
 title: "Cache Notes"
 date: 2024-05-13T08:39:14+08:00
 draft: false
-author: ["Yeelight"]
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 showtoc: true
 weight:
 math: false

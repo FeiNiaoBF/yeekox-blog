@@ -2,7 +2,10 @@
 title: "牛肉泛着蓝绿色的色泽"
 date: 2024-11-10T10:33:39+08:00
 draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+author:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 math: false
 toc: true
 comments: true

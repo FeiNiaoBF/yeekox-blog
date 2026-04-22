@@ -1,9 +1,5 @@
 ---
-title: "Essay"
+title: "流水落花，香满楼"
 date: 2026-04-13T22:33:03+08:00
-draft: true  # Is this a draft? true/false！！！
-author: ["Yeelight"]
-math: false
-toc: true
-comments: true
+layout: wide
 ---

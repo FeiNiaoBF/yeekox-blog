@@ -2,10 +2,18 @@
 title: "将Blender培养成兴趣爱好"
 date: 2025-03-07T19:18:10+08:00
 draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
+
 math: false
 toc: true
 comments: true
+tags:
+  - Blender
+  - 3D建模
+  - 教程
 ---
 
 ## **建立基础认知**
@@ -133,10 +141,8 @@ comments: true
 
 ## 渲染器
 
-![from 【【Kurt】Blender零基础入门教程 | Blender中文区新手必刷教程(已完结)】 【精准空降到 14:48】 [https://www.bilibili.com/video/BV14u41147YH/?p=5&t=888](https://www.bilibili.com/video/BV14u41147YH/?p=5&share_source=copy_web&vd_source=d5efab7d321db0143c2cb5b69560507a&t=888)](attachment:add06bfc-e3c0-4e27-bba5-6aa6b55cfe1e:image.png)
+[【【Kurt】Blender零基础入门教程 | Blender中文区新手必刷教程(已完结)】【精准空降到 14:48】](https://www.bilibili.com/video/BV14u41147YH/?p=5&t=888)
 
-from 【【Kurt】Blender零基础入门教程 | Blender中文区新手必刷教程(已完结)】 【精准空降到 14:48】 [https://www.bilibili.com/video/BV14u41147YH/?p=5&t=888](https://www.bilibili.com/video/BV14u41147YH/?p=5&share_source=copy_web&vd_source=d5efab7d321db0143c2cb5b69560507a&t=888)
-
-# 第一个作品
+## 第一个作品
 
 ![珍珠少女](https://s2.loli.net/2025/03/07/bFjAyNwX75s462d.png)

@@ -1,31 +1,23 @@
-{{/*  利用 Hugo 的shortcode做的嵌入式bilibili  */}}
+{{ $bvid := .Get "bvid" }}
+{{ $title := .Get "title" }}
+{{ $class := .Get "class" | default "" }}
 
-{{- $bvid := .Get "bvid" -}}
-{{- $width := .Get "width" | default "100%" -}}
-{{- $height := .Get "height" | default "500" -}}
-{{- $autoplay := .Get "autoplay" | default "false" -}}
-{{- $page := .Get "page" | default "1" -}}
-{{- $high_quality := .Get "high_quality" | default "0" -}}
-{{- $class := .Get "class" -}}
-
-{{- if not $bvid -}}
-  {{- errorf "bvid is required" -}}
-{{- end -}}
-
-<div
-    class="bilibili-container hx-relative hx-w-full \
-        hx-rounded-2xl hx-border hx-border-gray-200 hx-bg-white \
-        dark:hx-border-neutral-800 dark:hx-bg-neutral-900  \
-        hx-overflow-hidden hx-shadow-md hover:hx-shadow-lg hx-transition-all \
-        {{ $class }}">
+<div class="hx:flex hx:flex-col hx:overflow-hidden hx:rounded-xl hx:border hx:border-gray-200 hx:bg-white hx:shadow-sm hx:transition-all hx:hover:shadow-lg hx:dark:border-gray-700 hx:dark:bg-gray-800 {{ $class }}">
+  <div class="hx:aspect-video hx:relative hx:w-full hx:bg-gray-100 hx:dark:bg-gray-900">
     <iframe
-        src="//player.bilibili.com/player.html?bvid={{ $bvid }}&autoplay={{ $autoplay }}&page={{ $page }}&high_quality={{ $high_quality }}"
-        scrolling="no"
-        border="0"
-        frameborder="no"
-        framespacing="0"
-        allowfullscreen="true"
-        class="hx-w-full"
-        style="aspect-ratio: 16/9; width: {{ $width }}; height: {{ $height }};"
-    ></iframe>
+      src="https://player.bilibili.com/player.html?bvid={{ $bvid }}&page=1&high_quality=1&danmaku=0"
+      scrolling="no"
+      border="0"
+      frameborder="no"
+      framespacing="0"
+      allowfullscreen="true"
+      class="hx:absolute hx:inset-0 hx:size-full">
+    </iframe>
+  </div>
+
+  {{ if $title }}
+  <div class="hx:p-4">
+    <h3 class="hx:font-semibold hx:text-gray-900 hx:dark:text-white hx:line-clamp-2 hx:text-lg hx:m-0">{{ $title }}</h3>
+  </div>
+  {{ end }}
 </div>

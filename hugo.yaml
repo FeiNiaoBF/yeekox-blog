@@ -38,6 +38,7 @@ markup:
 # 全局参数配置 (Params)
 # -----------------------------------------------------------
 params:
+
   # 外部链接自动添加跳转图标
   externalLinkDecoration: true
 
@@ -63,6 +64,7 @@ params:
 
   displayUpdatedDate: true
   dateFormat: "2006-01-02"
+  displayUpdatedAuthor: true
 
   theme:
     default: system
@@ -124,6 +126,7 @@ languages:
     languageDirection: ltr
     weight: 1
     title: Yeelight の 小屋
+
     params:
       description: "记录个人成长、技术探索与生活感悟，分享发现美好生活的点滴。"
       page:
@@ -170,10 +173,14 @@ menu:
     - identifier: blog
       pageRef: /blog
       weight: 1
+      params:
+        type: link
 
     - identifier: gaming
       pageRef: /gaming
       weight: 2
+      params:
+        type: link
 
     - identifier: creations
       weight: 3
@@ -222,28 +229,41 @@ menu:
         type: link
     - identifier: steam
       weight: 2
-      url: "https://streamlabs.com/feiniaobf"
+      url: "https://s.team/p/cbmc-vkcd/ctqpgvmn" # 30 days link
       parent: social
       params:
         type: link
-    - identifier: x-twitter
-      weight: 3
-      url: "https://x.com/FeiNiaoBF"
-      parent: social
-      params:
-        type: links
+    # - identifier: x-twitter
+    #   weight: 3
+    #   url: "https://x.com/FeiNiaoBF"
+    #   parent: social
+    #   params:
+    #     type: link
     - identifier: bilibili
       weight: 4
       url: "https://space.bilibili.com/592367582"
       parent: social
       params:
         type: link
+    - identifier: mail
+      weight: 5
+      url: "mailto:yeelight612@gmail.com"
+      parent: social
+      params:
+        type: link
+
   # 侧边栏菜单配置
   sidebar:
     - identifier: more
       params:
         type: separator
       weight: 1
+    - identifier: archives
+      pageRef: /archives
+      weight: 2
+    - identifier: updates
+      pageRef: /update
+      weight: 3
     - identifier: about
       pageRef: /about
-      weight: 2
+      weight: 4

@@ -2,7 +2,10 @@
 title: "Http 是什么"
 date: 2024-06-11T22:49:31+08:00
 draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 math: false
 toc: true
 comments: true

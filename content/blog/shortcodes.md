@@ -7,6 +7,10 @@ math: false
 toc: true
 type: docs
 comments: true
+tags:
+  - Hugo
+  - Shortcode
+  - Hextra
 ---
 
 ## 起因

@@ -1,54 +1,62 @@
 ---
-title: "Kubernetes学习手册"
+title: "Kubernetes初步学习手册"
 date: 2024-12-19T10:40:31+08:00
-draft: true  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+draft: false  # Is this a draft? true/false！！！
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
+
 math: false
 toc: true
 comments: true
+tags:
+  - Kubernetes
+  - 容器编排
+  - 云原生
 ---
 
 > From Docs
 > [Docs](https://k8s-tutorials.pages.dev/)
 
-# **Kubernetes‘s Overview**
+## **Kubernetes‘s Overview**
 
 Kubernetes is a portable, extensible, open source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation.
   <!--more-->
 [Overview](https://kubernetes.io/docs/concepts/overview/#why-you-need-kubernetes-and-what-can-it-do)
 
-# 基础知识
+## **基础知识**
 
-## **1. 容器**
+### **容器**
 
 - Kubernetes 管理容器化应用。容器是一种轻量级的虚拟化技术，它将应用程序及其依赖项打包到一个可移植的单元中。容器使得应用程序可以在不同的环境中一致地运行，而无需担心底层操作系统的差异。
 - 常见的容器技术有 Docker，它提供了一种创建、运行和分发容器的方式。
 
-## **2. Pod**
+### **Pod**
 
 - 在 Kubernetes 中，最小的部署单元是 Pod。一个 Pod 可以包含一个或多个紧密相关的容器，这些容器共享存储、网络和其他资源。
 - Pod 中的容器通常是为了共同完成一个特定的任务而组合在一起的。例如，一个 Web 应用程序可能由一个 Web 服务器容器和一个数据库容器组成，它们可以部署在同一个 Pod 中。
 
-## **3. 节点（Node）**
+### **节点（Node）**
 
 - 节点是 Kubernetes 集群中的工作机器，可以是物理机或虚拟机。每个节点上运行着 Kubernetes 的代理程序（kubelet），负责管理该节点上的容器。
 - 节点可以加入或离开集群，Kubernetes 会自动重新调度容器到其他可用的节点上，以确保应用程序的高可用性。
 
-## **4. 服务（Service）**
+### **服务（Service）**
 
 - 服务是一种抽象，用于定义一组 Pod 的访问方式。它提供了一个稳定的 IP 地址和端口，使得客户端可以通过这个地址访问到一组 Pod，而无需关心 Pod 的具体位置。
 - 服务可以实现负载均衡，将请求分发到多个 Pod 上，提高应用程序的性能和可靠性。
 
-## **5. 命名空间（Namespace）**
+### **命名空间（Namespace）**
 
 - 命名空间用于在一个 Kubernetes 集群中划分不同的环境或项目。它可以将资源（如 Pod、服务、配置等）隔离在不同的命名空间中，以便进行多租户管理或资源隔离。
 - 不同的命名空间可以有不同的访问控制策略，确保资源的安全性。
 
-# 使用`minikube`部署单机集群
+## **使用`minikube`部署单机集群**
 
 [minikube](https://minikube.sigs.k8s.io/docs/)
 
-**minikube 命令速查**
+minikube 命令速查：
 
 `minikube stop` 不会删除任何数据，只是停止 VM 和 k8s 集群。
 
@@ -64,11 +72,11 @@ Kubernetes is a portable, extensible, open source platform for managing containe
 
 `minikube service ingress-nginx-controller -n ingress-nginx --url`来公开服务
 
-# 使用Kubernetes
+## 使用Kubernetes
 
 如果在生产环境中运行的都是独立的单体服务，那么 Container (容器) 也就够用了，但是在实际的生产环境中，维护着大规模的集群和各种不同的服务，服务之间往往存在着各种各样的关系。而这些关系的处理，才是手动管理最困难的地方。
 
-## Pod
+### Pod
 
 `Pob` 是在 Kubernetes 中创建和管理的、最小的可部署的计算单元。
 
@@ -419,7 +427,7 @@ kubectl api-resources
 kubectl explain <资源类型>
 ```
 
-# 问题集锦
+## 问题集锦
 
 1. docker 的网络问题
 

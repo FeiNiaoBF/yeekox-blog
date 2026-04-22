@@ -2,10 +2,13 @@
 title: "Redis过期策略"
 date: 2025-03-12T10:52:45+08:00
 draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
-math: false
-toc: true
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 comments: true
+tags:
+  - Redis
 ---
 
 - 定时过期：每个设置过期时间的键都需要创建一个定时器，到过期时间就会立即清除。

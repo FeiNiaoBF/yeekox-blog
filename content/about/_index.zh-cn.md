@@ -1,5 +1,9 @@
 ---
 date: '2025-03-03T14:15:26+08:00'
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 draft: false
 title: '关于我自己'
 toc: false

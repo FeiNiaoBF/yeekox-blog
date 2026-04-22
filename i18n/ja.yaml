@@ -1,4 +1,4 @@
-copyright: "© 2023-2025 Yeelight's Blog. 日常と技術学習の記録。"
+copyright: "© 2023-2026 Yeelight's Blog. 日常と技術学習の記録。"
 documentation: ドキュメント
 home: ホーム
 posts: 記事
@@ -16,6 +16,7 @@ bilibili: Bilibili
 gaming: ゲーム
 steam: Steam
 x-twitter: X
+mail: メール
 
 light: "ライト"
 dark: "ダーク"
@@ -30,3 +31,4 @@ poweredBy: "Powered by Hextra"
 readMore: "続きを読む →"
 searchPlaceholder: "検索..."
 more: もっと見る
+updates: ドキュメントの更新

@@ -1,13 +1,19 @@
 ---
 title: "⭐个人成长计划"
-date: 2025-03-04T09:58:41+08:00
 draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
+
 math: true
 toc: true
 type: "docs"
 comments: true
 weight: 1
+tags:
+  - 个人成长
+  - 学习计划
 ---
 
 ## 背景：为何制定个人成长计划？

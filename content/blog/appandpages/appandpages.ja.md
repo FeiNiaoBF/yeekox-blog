@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Appandpages"
+date: 2026-04-23T00:25:08+08:00
 draft: true  # Is this a draft? true/false！！！
 author:
   - name: "Yeelight"

@@ -2,10 +2,18 @@
 title: "GDB基本使用"
 date: 2023-04-24T19:10:36+08:00
 draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 math: false
 toc: true
 comments: true
+tags:
+  - C
+  - Debug
+  - GDB
+  - 工具
 ---
 
 ## gdb调试命令

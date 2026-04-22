@@ -15,7 +15,8 @@ github: GitHub
 bilibili: B站
 gaming: 游戏
 steam: Steam
-x-twitter: X
+x-twitter: twitter
+mail: 邮箱
 
 light: "浅色"
 dark: "深色"
@@ -30,3 +31,4 @@ poweredBy: "由 Hextra 驱动"
 readMore: "更多 →"
 searchPlaceholder: "搜索文档..."
 more: 更多
+updates: 更新

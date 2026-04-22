@@ -1,9 +1,5 @@
 ---
-title: "Gaming"
+title: "精彩一刻"
 date: 2026-04-13T22:32:16+08:00
-draft: true  # Is this a draft? true/false！！！
-author: ["Yeelight"]
-math: false
-toc: true
-comments: true
+layout: wide
 ---

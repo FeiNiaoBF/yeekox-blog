@@ -16,7 +16,7 @@ bilibili: Bilibili
 gaming: Gaming
 steam: Steam
 x-twitter: X
-
+mail: Mail
 
 light: "Light"
 dark: "Dark"
@@ -31,3 +31,4 @@ poweredBy: "Powered by Hextra"
 readMore: "Read more →"
 searchPlaceholder: "Search..."
 more: More
+updates: Updates
