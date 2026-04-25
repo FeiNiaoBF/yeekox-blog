@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "chmod a+x build.sh && ./build.sh",
+  "installCommand": "yum install golang",
+  "buildCommand": "hugo --gc --minify --baseURL \"https://$VERCEL_PROJECT_PRODUCTION_URL\"",
   "outputDirectory": "public"
 }
