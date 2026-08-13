@@ -1,8 +1,11 @@
 ---
 title: "XV6的锁和并行"
 date: 2025-03-04T11:42:43+08:00
-draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+draft: false
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 math: false
 toc: true
 comments: true

@@ -1,6 +1,6 @@
 ---
 title: "⭐个人成长计划"
-draft: false  # Is this a draft? true/false！！！
+draft: false
 authors:
   - name: "Yeelight"
     link: https://github.com/FeiNiaoBF

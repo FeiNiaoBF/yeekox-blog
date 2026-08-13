@@ -1,8 +1,11 @@
 ---
 title: "文件描述符"
 date: 2025-03-04T10:58:53+08:00
-draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+draft: false
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 math: false
 toc: true
 comments: true

@@ -155,7 +155,6 @@ languages:
     languageName: 日本語
     languageCode: ja-JP
     languageDirection: ltr
-    contentDir: content/japan
     weight: 3
     title: Yeelight の 小屋
     params:

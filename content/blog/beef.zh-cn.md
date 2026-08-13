@@ -1,14 +1,18 @@
 ---
 title: "牛肉泛着蓝绿色的色泽"
 date: 2024-11-10T10:33:39+08:00
-draft: false  # Is this a draft? true/false！！！
-author:
+draft: false
+authors:
   - name: "Yeelight"
     link: https://github.com/FeiNiaoBF
     image: https://github.com/FeiNiaoBF.png
 math: false
 toc: true
 comments: true
+tags:
+  - 科普
+  - 食品
+  - 物理
 ---
 
 牛肉泛着绿光并不是牛肉内部发生了化学反应，实际上是一种物理现象。 由于牛肉中含有铁质、脂肪和其他化合物。 **当牛肉横纹结构和纤维被快速切割开后，这个时候会发生衍射效应，此时牛肉就会泛着蓝绿色的色泽**。

@@ -1,7 +1,7 @@
 ---
 title: "GDB基本使用"
 date: 2023-04-24T19:10:36+08:00
-draft: false  # Is this a draft? true/false！！！
+draft: false
 authors:
   - name: "Yeelight"
     link: https://github.com/FeiNiaoBF
@@ -99,13 +99,127 @@ GDB在显示变量值时都会在对应值之前加上
 
 使程序继续往下运行，直到再次遇到断点或程序结束；
 
-## 完整的gdb调试
+## 完整的 GDB 调试：实战排查 Segfault
 
-## 退出gdb
+前面的命令都是零散的招式，现在我们把它们串起来，走一遍真实的调试流程。
+
+假设你写了一个 C 程序 `segfault.c`：
 
 ```c
-# 输入'q'
+#include <stdio.h>
+
+void crash_here(int *p) {
+    printf("p 指向的值是: %d\n", *p);  // p 可能是 NULL！
+}
+
+int main() {
+    int *ptr = NULL;
+    crash_here(ptr);
+    return 0;
+}
+```
+
+编译（带调试符号）：
+
+```bash
+gcc -g -o segfault segfault.c
+```
+
+运行直接崩溃：
+
+```bash
+$ ./segfault
+Segmentation fault (core dumped)
+```
+
+### 开始 GDB 调试
+
+```bash
+$ gdb ./segfault
+```
+
+**1. 设置断点在 crash_here 函数：**
+
+```gdb
+(gdb) b crash_here
+Breakpoint 1 at 0x401150: file segfault.c, line 4.
+```
+
+**2. 运行程序：**
+
+```gdb
+(gdb) r
+Starting program: ./segfault
+
+Breakpoint 1, crash_here (p=0x0) at segfault.c:4
+4           printf("p 指向的值是: %d\n", *p);
+```
+
+断在 crash_here 了，注意 `p=0x0` —— 这已经是 NULL 了！
+
+**3. 检查变量：**
+
+```gdb
+(gdb) p p
+$1 = (int *) 0x0
+
+(gdb) p *p
+Cannot access memory at address 0x0
+```
+
+`p` 是空指针，解引用就崩。
+
+**4. 回溯调用栈，看谁传的 NULL：**
+
+```gdb
+(gdb) bt
+#0  crash_here (p=0x0) at segfault.c:4
+#1  0x000000000040116a in main () at segfault.c:9
+```
+
+一目了然：`main` 第 9 行调用了 `crash_here(ptr)`，而 `ptr` 是 NULL。
+
+**5. 切到 main 帧，看 ptr 的值：**
+
+```gdb
+(gdb) frame 1
+#1  0x000000000040116a in main () at segfault.c:9
+9           crash_here(ptr);
+
+(gdb) p ptr
+$2 = (int *) 0x0
+```
+
+铁证如山。修 bug：给 ptr 分配有效内存。
+
+### 调试流程总结
+
+```
+编译(-g) → GDB 启动 → 断点(b) → 运行(r) → 检查变量(p) → 回溯(bt) → 定位 → 退出(q)
+```
+
+这才是 GDB 的正确打开方式。之前的单个命令只是基本功，串起来才是真正的调试。
+
+## 退出 GDB
+
+```gdb
+# 输入 'q'
 (gdb) q
 ```
 
-（施工中🚧）
+## 常用命令速查表
+
+| 命令 | 缩写 | 作用 |
+|------|------|------|
+| `break` | `b` | 设置断点 |
+| `run` | `r` | 运行程序 |
+| `next` | `n` | 单步（不进入函数） |
+| `step` | `s` | 单步（进入函数） |
+| `continue` | `c` | 继续运行 |
+| `print` | `p` | 打印变量 |
+| `backtrace` | `bt` | 查看调用栈 |
+| `frame` | `f` | 切换栈帧 |
+| `watch` | - | 监视变量变化 |
+| `quit` | `q` | 退出 |
+
+GDB 不复杂，关键是**遇到 bug 时会用它走完上面那个流程**。

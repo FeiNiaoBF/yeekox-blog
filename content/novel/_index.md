@@ -1,5 +1,5 @@
 ---
 title: '归南山'
-draft: false # Is this a draft? true/false！！！
+draft: false
 layout: wide
 ---

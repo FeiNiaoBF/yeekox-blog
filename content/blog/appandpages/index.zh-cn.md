@@ -1,8 +1,8 @@
 ---
 title: "App Router 和 Pages Router 的区别"
 date: 2026-04-23T00:25:08+08:00
-draft: false  # Is this a draft? true/false！！！
-author:
+draft: false
+authors:
   - name: "Yeelight"
     link: https://github.com/FeiNiaoBF
     image: https://github.com/FeiNiaoBF.png

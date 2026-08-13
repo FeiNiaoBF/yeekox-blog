@@ -1,8 +1,11 @@
 ---
 title: "MIT6.824 Distributed System(1)---Lab01"
 date: 2024-07-01T17:16:23+08:00
-draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+draft: false
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 math: false
 toc: true
 comments: true

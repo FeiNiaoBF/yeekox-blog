@@ -1,7 +1,7 @@
 ---
 title: "使用 Channel 最常见的错误是 panic 和 goroutine 泄漏"
 date: 2025-03-12T10:51:46+08:00
-draft: false  # Is this a draft? true/false！！！
+draft: false
 authors:
   - name: "Yeelight"
     link: https://github.com/FeiNiaoBF

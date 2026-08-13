@@ -1,11 +1,17 @@
 ---
 title: "期货是什么"
 date: 2024-09-12T10:39:25+08:00
-draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+draft: false
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 math: false
 toc: true
 comments: true
+tags:
+  - 金融
+  - 期货
 ---
 
 期货是一种金融衍生工具，是指买卖双方在约定的时间以约定的价格交易某种标的资产的标准化合约。这种标的资产可以是实物商品（如黄金、原油、农产品）或者金融资产（如股票指数、利率、外汇等）。期货交易的特点是通过交易所进行的标准化交易，且必须遵守合约的规则和条款。

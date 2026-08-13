@@ -1,8 +1,11 @@
 ---
 title: "通过 XV6 来学习操作系统(OSTEP)"
 date: 2025-03-04T10:58:48+08:00
-draft: false  # Is this a draft? true/false！！！
-author: ["Yeelight"]
+draft: false
+authors:
+  - name: "Yeelight"
+    link: https://github.com/FeiNiaoBF
+    image: https://github.com/FeiNiaoBF.png
 math: false
 toc: true
 comments: true

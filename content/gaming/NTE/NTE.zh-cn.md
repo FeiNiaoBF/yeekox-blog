@@ -1,8 +1,8 @@
 ---
 title: "异环试玩"
 date: 2026-04-23T20:17:29+08:00
-draft: false  # Is this a draft? true/false！！！
-author:
+draft: false
+authors:
   - name: "Yeelight"
     link: https://github.com/FeiNiaoBF
     image: https://github.com/FeiNiaoBF.png

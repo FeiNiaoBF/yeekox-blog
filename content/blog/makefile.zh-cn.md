@@ -1,7 +1,7 @@
 ---
 title: "MakeFile使用笔记"
 date: 2023-04-24T19:08:45+08:00
-draft: false  # Is this a draft? true/false！！！
+draft: false
 authors:
   - name: "Yeelight"
     link: https://github.com/FeiNiaoBF
@@ -59,3 +59,96 @@ object = $(boo)
 这样的好处是我们可以简化我们的make文件，是它不是这么的杂乱无章。
 
 ## 书写规则
+
+
+### 显式规则
+
+最常用的形式，明确指定目标、依赖和命令：
+
+```makefile
+# 目标: 依赖
+#	命令（注意：必须是 TAB，不能是空格！）
+main.o: main.c utils.h
+	gcc -c -o main.o main.c
+```
+
+### 隐式规则
+
+Make 内置了许多"潜规则"。比如你不需要告诉它 `.c` 怎么变成 `.o`，它自己知道：
+
+```makefile
+# 你只需要写目标和依赖，make 自动用 cc -c 编译
+main.o: main.c utils.h  # Make 自动推导命令：cc -c main.c
+```
+
+### 通配符和模式规则
+
+```makefile
+# 通配符：匹配所有 .c 文件
+SRCS = $(wildcard *.c)
+
+# 模式规则：% 是通配部分
+%.o: %.c
+	gcc -c $< -o $@
+#   $< = 第一个依赖（源文件）
+#   $@ = 目标名
+```
+
+### 伪目标（PHONY）
+
+```makefile
+.PHONY: clean all
+
+all: main
+
+clean:
+	rm -f *.o main
+
+main: main.o utils.o
+	gcc -o main main.o utils.o
+```
+
+为什么需要 `.PHONY`？因为如果目录里恰好有一个叫 `clean` 的文件，make 会认为"目标已存在，不需要执行"。加上 `.PHONY` 后，不论有没有同名文件，命令都会执行。
+
+### 自动变量速查
+
+| 变量 | 含义 |
+|------|------|
+| `$@` | 目标文件名 |
+| `$<` | 第一个依赖文件名 |
+| `$^` | 所有依赖文件名（去重） |
+| `$?` | 所有比目标新的依赖文件 |
+| `$*` | 模式规则中 `%` 匹配的部分 |
+
+## 一个完整的示例
+
+```makefile
+CC = gcc
+CFLAGS = -Wall -g
+SRCS = $(wildcard *.c)
+OBJS = $(SRCS:.c=.o)  # 把 .c 替换成 .o
+TARGET = app
+
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJS) $(TARGET)
+```
+
+这个 Makefile 可以编译目录下所有 `.c` 文件，链接成一个 `app`，干净利落。
+
+## 总结
+
+- Makefile 的核心就三个概念：**目标（target）、依赖（prerequisites）、命令（command）**
+- 变量像 C 语言的宏，简化重复内容
+- `$@`/`$<`/`$^` 这些自动变量让规则更通用
+- `.PHONY` 防止"伪目标"被文件干扰
+- **记住：命令前面的缩进必须是 TAB，不能是空格**——这是 Makefile 新手的头号陷阱
