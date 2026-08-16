@@ -4,6 +4,6 @@
   "buildCommand": "hugo --gc --minify --baseURL \"https://${VERCEL_PROJECT_PRODUCTION_URL:-yeekox-blog.vercel.app}\"",
   "outputDirectory": "public",
   "env": {
-    "HUGO_VERSION": "0.160.0"
+    "HUGO_VERSION": "0.164.0"
   }
 }
