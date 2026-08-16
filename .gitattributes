@@ -1,0 +1,2 @@
+# Ensure shell scripts stay LF even on Windows checkouts (Vercel/CI run bash)
+*.sh text eol=lf
