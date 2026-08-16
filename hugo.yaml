@@ -1,27 +1,38 @@
-# 基础配置
 baseURL: "https://feiniaobf.github.io/yeekox-blog"
-title: Yeelight の 小屋
-
+title: "Yeelight の 小屋"
+defaultContentLanguage: "zh-cn"
 enableRobotsTXT: true
 enableGitInfo: true
 hasCJKLanguage: true
-enableInlineShortcodes: true
 
-outputs:
-  home: [html, llms]
-  page: [html, markdown]
-  section: [html, rss, markdown]
+languages:
+  zh-cn:
+    label: "中文"
+    locale: "zh-CN"
+    weight: 1
+    title: "Yeelight の 小屋"
+  en:
+    label: "English"
+    locale: "en-US"
+    weight: 2
+    title: "Yeelight's Cabin"
+  ja:
+    label: "日本語"
+    locale: "ja-JP"
+    weight: 3
+    title: "Yeelight の 小屋"
 
-# 模块导入与版本要求
+# ============ 主题模块（Inyo） ============
 module:
   hugoVersion:
     extended: true
-    min: "0.156.0"
+    min: "0.164.0"
   imports:
-    - path: github.com/imfing/hextra
+    - path: github.com/FeiNiaoBF/hugo-theme-inyo
 
-# 开启数学公式 (LaTeX) 解析支持
+# ============ Markdown / LaTeX ============
 markup:
+  _merge: "deep"
   highlight:
     noClasses: false
   goldmark:
@@ -34,235 +45,30 @@ markup:
           inline: [['\(', '\)']]
         enable: true
 
-# -----------------------------------------------------------
-# 全局参数配置 (Params)
-# -----------------------------------------------------------
+# ============ Inyo 主题参数 ============
 params:
+  font: "wenkai"
+  webfonts: true
+  subtitle: "纸墨二元 · 落字有间"
+  author: "Yeelight"
+  math: true
 
-  # 外部链接自动添加跳转图标
-  externalLinkDecoration: true
+  # 首页目录只收 posts 分区；其他顶层目录可按需扩展
+  mainSections: ["posts"]
 
-  # 开启图片点击放大 (Image Zoom)
-  imageZoom:
-    enable: true
+  navigation:
+    tags: "tags"
+    about: "about"
 
-  navbar:
-    displayTitle: false
-    displayLogo: true
-    logo:
-      path: images/logo.svg
-      dark: images/logo-dark.svg
-      link: /yeekox-blog
-      width: 100
-    width: wide
+  # 诗词 hero（默认关闭，用主题内置诗句；开启则从 API 拉取）
+  heroPoetry:
+    api:
+      enabled: false
+      endpoint: "https://poetry.palemoky.com/api/poems/random"
+      lang: "zh-Hans"
 
-  footer:
-    enable: true
-    displayCopyright: true
-    displayPoweredBy: true
-    width: normal
-
-  displayUpdatedDate: true
-  dateFormat: "2006-01-02"
-  displayUpdatedAuthor: true
-
-  theme:
-    default: system
-    displayToggle: true
-
-  search:
-    enable: true
-    type: flexsearch
-    flexsearch:
-      index: content
-      tokenize: forward
-
-  editURL:
-    enable: true
-    base: "https://github.com/FeiNiaoBF/yeekox-blog/edit/main/content/"
-
-  blog:
-    list:
-      displayTags: true
-      sortBy: date
-      sortOrder: desc
-      pagerSize: 20 # 分页大小
-    article:
-      displayPagination: true
-
-  highlight:
-    copy:
-      enable: true
-      display: hover
-
-  page:
-    width: normal
-
-  # Giscus 评论配置
-  comments:
-    enable: true
-    type: giscus
-    giscus:
-      repo: FeiNiaoBF/yeekox-blog
-      repoId: R_kgDOOCOsYw
-      category: General
-      categoryId: DIC_kwDOOCOsY84Cni-m
-      mapping: title
-      strict: 0
-      reactionsEnabled: 1
-      emitMetadata: 0
-      inputPosition: bottom
-      lang: zh-CN
-
-# ------------------------------------------------------
-# 多语言配置
-# ------------------------------------------------------
-defaultContentLanguage: zh-cn
-
-languages:
-  zh-cn:
-    languageName: 简体中文
-    languageCode: zh-CN
-    languageDirection: ltr
-    weight: 1
-    title: Yeelight の 小屋
-
-    params:
-      description: "记录个人成长、技术探索与生活感悟，分享发现美好生活的点滴。"
-      page:
-        contextMenu:
-          enable: true
-          links:
-            - name: 在 ChatGPT 中打开
-              icon: chatgpt
-              url: "https://chatgpt.com/?hints=search&q=%E6%88%91%E6%AD%A3%E5%9C%A8%E9%98%85%E8%AF%BB%E8%BF%99%E4%B8%AA%E6%96%87%E6%A1%A3%3A+{url}%0A%E5%B8%AE%E6%88%91%E7%90%86%E8%A7%A3%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%83%E3%80%82"
-  en:
-    languageName: English
-    languageCode: en
-    languageDirection: ltr
-    weight: 2
-    title: Yeelight's Cabin
-    params:
-      description: "Documenting personal growth, technical exploration, and life moments."
-      page:
-        contextMenu:
-          enable: true
-          links:
-            - name: Open in ChatGPT
-              icon: chatgpt
-              url: "https://chatgpt.com/?hints=search&q=I%27m+looking+at+this+documentation%3A+{url}%0AHelp+me+understand+how+to+use+it."
-  ja:
-    languageName: 日本語
-    languageCode: ja-JP
-    languageDirection: ltr
-    weight: 3
-    title: Yeelight の 小屋
-    params:
-      description: "個人の成長、技術の探求、生活の記録。"
-      page:
-        contextMenu:
-          enable: true
-          links:
-            - name: ChatGPTで開く
-              icon: chatgpt
-              url: "https://chatgpt.com/?hints=search&q=%E3%81%93%E3%81%AE%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%84%E3%81%BE%E3%81%99%3A+{url}%0A%E4%BD%BF%E3%81%84%E6%96%B9%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B%E3%81%AE%E3%82%92%E6%89%8B%E4%BC%9D%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82"
-
-menu:
-  main:
-    - identifier: blog
-      pageRef: /blog
-      weight: 1
-      params:
-        type: link
-
-    - identifier: gaming
-      pageRef: /gaming
-      weight: 2
-      params:
-        type: link
-
-    - identifier: creations
-      weight: 3
-      params:
-        type: separator
-    - identifier: projects
-      parent: creations
-      pageRef: /projects
-      weight: 1
-    - identifier: novel
-      parent: creations
-      pageRef: /novel
-      weight: 2
-    - identifier: essay
-      parent: creations
-      pageRef: /essay
-      weight: 3
-
-    - identifier: more
-      pageRef: /more
-      weight: 4
-
-    - identifier: archives
-      pageRef: /archives
-      weight: 1
-      parent: more
-    - identifier: about
-      pageRef: /about
-      weight: 2
-      parent: more
-
-    - identifier: search
-      weight: 5
-      params:
-        type: search
-
-    - identifier: social
-      weight: 6
-      params:
-        type: separator
-    - identifier: github
-      weight: 1
-      url: "https://github.com/FeiNiaoBF/yeekox-blog"
-      parent: social
-      params:
-        type: link
-    - identifier: steam
-      weight: 2
-      url: "https://s.team/p/cbmc-vkcd/ctqpgvmn" # 30 days link
-      parent: social
-      params:
-        type: link
-    # - identifier: x-twitter
-    #   weight: 3
-    #   url: "https://x.com/FeiNiaoBF"
-    #   parent: social
-    #   params:
-    #     type: link
-    - identifier: bilibili
-      weight: 4
-      url: "https://space.bilibili.com/592367582"
-      parent: social
-      params:
-        type: link
-    - identifier: mail
-      weight: 5
-      url: "mailto:yeelight612@gmail.com"
-      parent: social
-      params:
-        type: link
-
-  # 侧边栏菜单配置
-  sidebar:
-    - identifier: more
-      params:
-        type: separator
-      weight: 1
-    - identifier: archives
-      pageRef: /archives
-      weight: 2
-    - identifier: updates
-      pageRef: /update
-      weight: 3
-    - identifier: about
-      pageRef: /about
-      weight: 4
+  social:
+    - name: "GitHub"
+      url: "https://github.com/feiniaobf"
+    - name: "RSS"
+      url: "/index.xml"
