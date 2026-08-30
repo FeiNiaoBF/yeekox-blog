@@ -45,6 +45,11 @@ markup:
           inline: [['\(', '\)']]
         enable: true
 
+# ============ 分类法（taxonomy） ============
+taxonomies:
+  tag: tags
+  category: categories
+
 # ============ Inyo 主题参数 ============
 params:
   font: "wenkai"
