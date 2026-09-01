@@ -6,7 +6,7 @@ Yeelight 的个人博客，使用 Hugo Extended 与 Inyo 主题构建，记录�
 
 - Hugo Extended `0.164.0` 或更高版本
 - Go `1.26.1` 或更高版本（Hugo Modules 需要）
-- Inyo `v0.1.1`
+- Inyo `v0.5.1`
 
 ## 内容结构
 
@@ -38,9 +38,10 @@ hugo --minify --printPathWarnings
 
 ## 部署
 
-- GitHub Pages：使用 `.github/workflows/pages.yaml`
-- Vercel：使用 `vercel.json`
-- 自定义构建：使用 `build.sh`
+- GitHub Pages：`.github/workflows/pages.yaml`（构建 + Pagefind 搜索索引 + 自动部署）
+- Vercel：`vercel.json`，构建逻辑在 `scripts/vercel-build.sh`（自动下载 Go/Hugo 工具链并生成 Pagefind 索引）
+
+写新文章可使用 `scripts/new-hugo-post.ps1`（自动创建三语文件）。
 
 所有部署入口统一使用 Hugo `0.164.0`，避免低于 Inyo 的最低版本要求。
 
