@@ -1,76 +1,63 @@
 param (
-    [Parameter(Mandatory=$true)]
-    [string]$global,
-    [Parameter(Mandatory=$false)]
-    [string]$category = "",
-    [Parameter(Mandatory=$false)]
-    [string]$file = ""
+    # 相对 content/ 的文章目录路径，例如：posts/memova、posts/6s081/05-trap
+    [Parameter(Mandatory = $true)]
+    [string]$Path,
+
+    # 生成系列入口（_index.{lang}.md）而不是文章（index.{lang}.md）
+    [switch]$Index,
+
+    # 语言列表，默认三语；只写中文可传 -Lang zh-cn
+    [string]$Lang = "zh-cn,en,ja"
 )
 
-$languages = @("zh-cn", "en", "ja")
-$basePath = ".\"
-$hugoBasePath = Resolve-Path $basePath -ErrorAction Stop
+$ErrorActionPreference = "Stop"
+
+# 校验：必须在 Hugo 项目根目录运行
+if (-not (Test-Path "hugo.yaml") -and -not (Test-Path "hugo.toml") -and -not (Test-Path "hugo.json")) {
+    Write-Host "Error: 当前目录不是 Hugo 项目根（找不到 hugo.yaml/toml/json）" -ForegroundColor Red
+    exit 1
+}
+
+# 校验 Path 不能包含 .. 等越界
+if ($Path -match "\.\." -or $Path -match "^/|:\\") {
+    Write-Host "Error: 非法路径：$Path" -ForegroundColor Red
+    exit 1
+}
+
+$baseName = if ($Index) { "_index" } else { "index" }
 $errorCount = 0
 
-# 切换到 Hugo 项目根目录
-try {
-    Set-Location $hugoBasePath
-    Write-Host "Switched to directory: $hugoBasePath"
-} catch {
-    Write-Host "Error: Failed to switch to $hugoBasePath. Please check the path." -ForegroundColor Red
-    exit 1
-}
+foreach ($lang in ($Lang -split "," | ForEach-Object { $_.Trim() })) {
+    if ([string]::IsNullOrEmpty($lang)) { continue }
+    $relPath = "content/$Path/$baseName.$lang.md"
 
-# 检查是否在正确的 Hugo 项目根目录
-if (-not (Test-Path "hugo.yaml") -and -not (Test-Path "hugo.toml") -and -not (Test-Path "hugo.json")) {
-    Write-Host "Error: This does not appear to be a Hugo project root directory (no hugo.yaml/toml/json found)." -ForegroundColor Red
-    exit 1
-}
+    if (Test-Path $relPath) {
+        Write-Host "跳过（已存在）: $relPath" -ForegroundColor Yellow
+        continue
+    }
 
-# 动态构建文件路径并创建文件
-foreach ($lang in $languages) {
-    # 根据新架构生成文件后缀名的路径，并用 ${} 保护变量名
-    $filePath = if ([string]::IsNullOrEmpty($category)) {
-        if ([string]::IsNullOrEmpty($file)) {
-            "content\${global}\_index.${lang}.md"   # 仅 global 参数 (例如: content\blog\_index.zh-cn.md)
-        } else {
-            "content\${global}\${file}.${lang}.md"  # global + file 参数 (例如: content\blog\my-post.zh-cn.md)
-        }
+    # 创建父目录并调用 Hugo 生成（自动套用 archetypes 模板）
+    # 系列入口用 --kind series 命中 archetypes/series.md
+    $parent = Split-Path $relPath -Parent
+    if (-not (Test-Path $parent)) {
+        New-Item -ItemType Directory -Path $parent -Force | Out-Null
+    }
+
+    if ($Index) {
+        & hugo new --kind series $relPath
     } else {
-        if ([string]::IsNullOrEmpty($file)) {
-            "content\${global}\${category}\_index.${lang}.md"  # global + category 参数
-        } else {
-            "content\${global}\${category}\${file}.${lang}.md" # 所有参数组合
-        }
+        & hugo new $relPath
     }
-
-    Write-Host "Creating $filePath..."
-    try {
-        # 检查文件是否存在
-        if (Test-Path $filePath) {
-            throw "File already exists"
-        }
-
-        # 创建父目录（如果需要）
-        $parentDir = Split-Path $filePath -Parent
-        if (-not (Test-Path $parentDir)) {
-            New-Item -ItemType Directory -Path $parentDir | Out-Null
-        }
-
-        # 调用 Hugo 命令
-        & hugo new $filePath
-        if ($LASTEXITCODE -ne 0) {
-            throw "Hugo command failed with exit code $LASTEXITCODE"
-        }
-    } catch {
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Error: hugo new 失败（exit $LASTEXITCODE）: $relPath" -ForegroundColor Red
         $errorCount++
-        Write-Host "Error: $_" -ForegroundColor Red
+    } else {
+        Write-Host "已创建: $relPath" -ForegroundColor Green
     }
 }
 
-# 根据错误计数显示最终结果
 if ($errorCount -gt 0) {
-    Write-Host "`nOperation completed with $errorCount error(s)." -ForegroundColor Yellow
+    Write-Host "`n完成，但有 $errorCount 个错误。" -ForegroundColor Yellow
 } else {
-    Write-Host "`nAll files created successfully!" -ForegroundColor Green
+    Write-Host "`n全部创建成功！" -ForegroundColor Green
 }
