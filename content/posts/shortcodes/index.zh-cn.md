@@ -150,7 +150,7 @@ touch layouts/shortcodes/bilibili.html
 ```
 
 Dang~~
-{{< media/bilibili bvid="BV1vrFieDE9f" >}}
+{{</* media/bilibili bvid="BV1vrFieDE9f" */>}}
 
 ## 重构
 

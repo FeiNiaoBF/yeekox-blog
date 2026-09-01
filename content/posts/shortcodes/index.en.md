@@ -146,11 +146,11 @@ Here's a basic version:
 Use it in your content:
 
 ```markdown
-{{< media/bilibili bvid="BV1vrFieDE9f" >}}
+{{</* media/bilibili bvid="BV1vrFieDE9f" */>}}
 ```
 
 Dang~~
-{{< media/bilibili bvid="BV1vrFieDE9f" >}}
+{{</* media/bilibili bvid="BV1vrFieDE9f" */>}}
 
 ## Refactoring
 
