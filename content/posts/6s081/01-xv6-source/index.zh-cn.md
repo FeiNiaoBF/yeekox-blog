@@ -2,6 +2,7 @@
 aliases:
   - /blog/note_class/mit6.s081_0/
   - /posts/note_class/mit6.S081_0/
+  - /blog/note_class/mit6.S081_0/
 title: "XV6的源码解析"
 weight: 10
 date: 2025-03-04T11:45:30+08:00

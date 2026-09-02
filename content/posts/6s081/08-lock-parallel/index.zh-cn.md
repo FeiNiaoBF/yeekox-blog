@@ -2,6 +2,7 @@
 aliases:
   - /blog/note_class/mit6.s081_7/
   - /posts/note_class/mit6.S081_7/
+  - /blog/note_class/mit6.S081_7/
 title: "XV6的锁和并行"
 weight: 80
 date: 2025-03-04T11:42:43+08:00

@@ -2,6 +2,7 @@
 aliases:
   - /blog/note_class/mit6.s081_4/
   - /posts/note_class/mit6.S081_4/
+  - /blog/note_class/mit6.S081_4/
 title: "XV6 的 gdb调试"
 weight: 50
 date: 2025-03-04T11:36:58+08:00

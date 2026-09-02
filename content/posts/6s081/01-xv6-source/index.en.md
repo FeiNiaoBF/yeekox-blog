@@ -2,6 +2,7 @@
 aliases:
   - /blog/note_class/mit6.s081_0/
   - /en/posts/note_class/mit6.S081_0/
+  - /blog/note_class/mit6.S081_0/
 title: "XV6 Source Code Walkthrough"
 weight: 10
 date: 2025-03-04T11:45:30+08:00

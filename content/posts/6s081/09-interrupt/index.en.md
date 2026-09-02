@@ -2,6 +2,7 @@
 aliases:
   - /blog/note_class/mit6.s081_8/
   - /en/posts/note_class/mit6.S081_8/
+  - /blog/note_class/mit6.S081_8/
 title: "Interrupts in XV6"
 weight: 90
 date: 2025-03-04T11:43:27+08:00

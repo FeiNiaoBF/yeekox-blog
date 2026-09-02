@@ -2,6 +2,7 @@
 aliases:
   - /blog/note_class/mit6.s081_2/
   - /posts/note_class/mit6.S081_2/
+  - /blog/note_class/mit6.S081_2/
 title: "文件描述符"
 weight: 30
 date: 2025-03-04T10:58:53+08:00

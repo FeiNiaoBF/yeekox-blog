@@ -2,6 +2,7 @@
 aliases:
   - /blog/note_class/mit6.s081_5/
   - /en/posts/note_class/mit6.S081_5/
+  - /blog/note_class/mit6.S081_5/
 title: "Traps in XV6"
 weight: 60
 date: 2025-03-04T11:38:58+08:00

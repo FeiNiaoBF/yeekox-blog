@@ -2,6 +2,7 @@
 aliases:
   - /blog/note_class/mit6.s081_3/
   - /en/posts/note_class/mit6.S081_3/
+  - /blog/note_class/mit6.S081_3/
 title: "Learning Operating Systems Hands-On"
 weight: 40
 date: 2025-03-04T11:01:10+08:00

@@ -1,6 +1,7 @@
 ---
 aliases:
   - /blog/rpc_principle/
+  - /blog/RPC_principle/
 title: "RPC的原理"
 date: 2026-04-23T19:27:41+08:00
 draft: false

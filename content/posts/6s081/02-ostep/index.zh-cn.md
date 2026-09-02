@@ -2,6 +2,7 @@
 aliases:
   - /blog/note_class/mit6.s081_1/
   - /posts/note_class/mit6.S081_1/
+  - /blog/note_class/mit6.S081_1/
 title: "通过 XV6 来学习操作系统(OSTEP)"
 weight: 20
 date: 2025-03-04T10:58:48+08:00

@@ -2,6 +2,7 @@
 aliases:
   - /blog/note_class/mit6.s081_6/
   - /posts/note_class/mit6.S081_6/
+  - /blog/note_class/mit6.S081_6/
 title: "XV6的进程和线程"
 weight: 70
 date: 2025-03-04T11:41:37+08:00
