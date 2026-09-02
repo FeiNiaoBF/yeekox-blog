@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/go_env_var/
 title: "Go_env_var"
 date: 2026-04-23T19:19:28+08:00
 draft: true

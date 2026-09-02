@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/plan_cs/
 title: "⭐个人成长计划"
 draft: false
 authors:

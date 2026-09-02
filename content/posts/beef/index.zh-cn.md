@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/beef/
 title: "牛肉泛着蓝绿色的色泽"
 date: 2024-11-10T10:33:39+08:00
 draft: false

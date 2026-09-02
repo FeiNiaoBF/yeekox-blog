@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/http/
 title: "What is HTTP?"
 date: 2024-06-11T22:49:31+08:00
 draft: false

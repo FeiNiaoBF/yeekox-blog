@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/lock/
 title: "同步原语与锁"
 date: 2024-08-26T10:48:24+08:00
 draft: false

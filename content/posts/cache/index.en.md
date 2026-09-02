@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/cache/
 title: "Cache Notes"
 date: 2024-05-13T08:39:14+08:00
 draft: false

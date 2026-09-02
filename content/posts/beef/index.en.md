@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/beef/
 title: "Why Beef Sometimes Looks Blue-Green"
 date: 2024-11-10T10:33:39+08:00
 draft: false

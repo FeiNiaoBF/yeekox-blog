@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/gdb/
 title: "GDB基本使用"
 date: 2023-04-24T19:10:36+08:00
 draft: false

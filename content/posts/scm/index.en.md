@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/scm/
 title: "Supply Chain Management (SCM): From Raw Materials to the Customer"
 date: 2024-11-25T10:35:40+08:00
 draft: false

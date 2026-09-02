@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/go_env_var/
 title: "Go 中的环境变量"
 date: 2026-04-23T19:19:27+08:00
 draft: false

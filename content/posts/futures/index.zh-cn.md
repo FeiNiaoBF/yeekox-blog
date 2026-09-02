@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/futures/
 title: "期货是什么"
 date: 2024-09-12T10:39:25+08:00
 draft: false

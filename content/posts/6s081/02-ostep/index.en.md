@@ -1,8 +1,4 @@
 ---
-aliases:
-  - /blog/note_class/mit6.s081_1/
-  - /en/posts/note_class/mit6.S081_1/
-  - /blog/note_class/mit6.S081_1/
 title: "Learning Operating Systems through XV6 (OSTEP)"
 weight: 20
 date: 2025-03-04T10:58:48+08:00

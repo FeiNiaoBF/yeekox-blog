@@ -1,8 +1,4 @@
 ---
-aliases:
-  - /blog/note_class/mit6.s081_7/
-  - /en/posts/note_class/mit6.S081_7/
-  - /blog/note_class/mit6.S081_7/
 title: "Locks and Parallelism in XV6"
 weight: 80
 date: 2025-03-04T11:42:43+08:00

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/channel_err/
 title: "The Most Common Channel Errors in Go: Panic and Goroutine Leaks"
 date: 2025-03-12T10:51:46+08:00
 draft: false

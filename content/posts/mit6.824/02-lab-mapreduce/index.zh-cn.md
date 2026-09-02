@@ -1,7 +1,4 @@
 ---
-aliases:
-  - /blog/note_class/mit6.824_lab1/
-  - /posts/note_class/mit6.824_lab1/
 title: "MIT6.824 Distributed System(1)---Lab01"
 weight: 20
 date: 2024-07-01T17:16:23+08:00

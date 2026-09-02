@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /gaming/nte/
 title: "NTE"
 date: 2026-04-23T20:17:29+08:00
 draft: true

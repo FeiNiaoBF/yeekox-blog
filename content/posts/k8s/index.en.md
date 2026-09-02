@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/k8s/
 title: "Kubernetes Preliminary Learning Guide"
 date: 2024-12-19T10:40:31+08:00
 draft: false

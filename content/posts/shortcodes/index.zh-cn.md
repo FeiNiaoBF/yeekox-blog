@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/shortcodes/
 title: '做一个自己的短代码'
 date: 2025-03-03T16:52:18+08:00
 draft: false

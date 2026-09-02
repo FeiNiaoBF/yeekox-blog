@@ -1,8 +1,4 @@
 ---
-aliases:
-  - /blog/note_class/mit6.s081_3/
-  - /posts/note_class/mit6.S081_3/
-  - /blog/note_class/mit6.S081_3/
 title: "操作系统的具体学习"
 weight: 40
 date: 2025-03-04T11:01:10+08:00

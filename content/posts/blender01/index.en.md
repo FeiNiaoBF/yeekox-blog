@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/blender01/
 title: "Turning Blender Into a Hobby"
 date: 2025-03-07T19:18:10+08:00
 draft: false

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/makefile/
 title: "MakeFile Notes"
 date: 2023-04-24T19:08:45+08:00
 draft: false

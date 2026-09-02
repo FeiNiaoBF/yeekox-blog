@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/http/
 title: "Http 是什么"
 date: 2024-06-11T22:49:31+08:00
 draft: false

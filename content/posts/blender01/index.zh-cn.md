@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/blender01/
 title: "将Blender培养成兴趣爱好"
 date: 2025-03-07T19:18:10+08:00
 draft: false

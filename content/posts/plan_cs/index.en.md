@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/plan_cs/
 title: "⭐ Personal Growth Plan"
 draft: false
 authors:

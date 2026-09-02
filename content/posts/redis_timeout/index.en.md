@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/redis_timeout/
 title: "Redis Expiration Strategy: Why Your Cache Won't Grow Forever?"
 date: 2025-03-12T10:52:45+08:00
 draft: false

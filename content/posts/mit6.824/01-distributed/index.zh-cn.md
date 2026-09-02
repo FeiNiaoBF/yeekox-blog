@@ -1,7 +1,4 @@
 ---
-aliases:
-  - /blog/note_class/mit6.824_1/
-  - /posts/note_class/mit6.824_1/
 title: "MIT6.824 Distributed System(1)"
 weight: 10
 date: 2024-07-01T17:16:12+08:00

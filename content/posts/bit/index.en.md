@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/bit/
 title: "The Magic of Bitwise Operations"
 date: 2022-11-10T21:04:43+08:00
 draft: false

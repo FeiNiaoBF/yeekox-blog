@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/lock/
 title: "Sync Primitives and Locks"
 date: 2024-08-26T10:48:24+08:00
 draft: false

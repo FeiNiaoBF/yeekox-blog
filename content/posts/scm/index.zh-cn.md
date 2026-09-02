@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/scm/
 title: "供应链管理(SCM)：从原材料到客户手里的全流程"
 date: 2024-11-25T10:35:40+08:00
 draft: false

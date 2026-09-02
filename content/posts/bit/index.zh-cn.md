@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/bit/
 title: "奇妙的位运算"
 date: 2022-11-10T21:04:43+08:00
 draft: false

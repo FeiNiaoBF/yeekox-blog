@@ -1,8 +1,4 @@
 ---
-aliases:
-  - /blog/note_class/mit6.s081_9/
-  - /en/posts/note_class/mit6.S081_9/
-  - /blog/note_class/mit6.S081_9/
 title: "XV6 File System"
 weight: 100
 date: 2025-03-04T11:44:22+08:00

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/backtrack/
 title: "回溯算法"
 date: 2024-06-11T22:39:52+08:00
 draft: false

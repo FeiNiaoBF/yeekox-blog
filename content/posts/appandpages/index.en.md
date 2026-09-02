@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/appandpages/
 title: "App Router vs Pages Router in Next.js"
 date: 2026-04-23T00:25:08+08:00
 draft: false

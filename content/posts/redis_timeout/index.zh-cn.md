@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/redis_timeout/
 title: "Redis 过期策略：你的缓存为什么不会无限膨胀？"
 date: 2025-03-12T10:52:45+08:00
 draft: false

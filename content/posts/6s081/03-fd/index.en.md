@@ -1,8 +1,4 @@
 ---
-aliases:
-  - /blog/note_class/mit6.s081_2/
-  - /en/posts/note_class/mit6.S081_2/
-  - /blog/note_class/mit6.S081_2/
 title: "File Descriptors"
 weight: 30
 date: 2025-03-04T10:58:53+08:00

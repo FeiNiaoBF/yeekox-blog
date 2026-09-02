@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /blog/shortcodes/
 title: 'Building Your Own Shortcode'
 date: 2025-03-03T16:52:18+08:00
 draft: false
